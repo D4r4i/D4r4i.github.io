@@ -1,0 +1,232 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap);
+.body-style {
+    background-color: white;
+    margin: 0px;
+}
+.top-menu {
+    /* background-color: aqua; */
+    width: 100%;
+    /* height: 150px; */
+    display: flex;
+}
+.info-block {
+    height: 200px;
+    /* background-color: aquamarine; */
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+}
+.info {
+    text-align: center;
+    font-size: 35px;
+    margin: 0;
+    line-height: 150%;
+    /* background-color: azure; */
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+}
+.div-info {
+    margin: auto;
+}
+.data-block {
+    width: 100%;
+    height: 666px;
+    /* background-color: blue; */
+    display: flex;
+}
+.main-block {
+    width: 100%;
+    height: 100%;
+    /* background-color: black; */
+}
+.name {
+    width: fit-content;
+    margin: 0px;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 86px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 200;
+}
+.bg-img {
+    background-image: url("\\images\\img.png");
+    margin: auto;
+    border-radius: 18px;
+    height: 600px;
+    width: 1600px;
+    display: flex;
+}
+.inp-table {
+    margin: auto;
+    width: fit-content;
+    transition: 1s;
+}
+.one-inp {
+    width: 500px;
+    height: 55px;
+    border: 0px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: inset 0px 1px 5px 1px #000;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+.dual-inp {
+    width: 244px;
+    height: 55px;
+    border: 0px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: inset 0px 1px 5px 1px #000;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+.last-inp1 {
+    width: 411px;
+    /* height: 77px; */
+    height: fit-content;
+    border: 0px;
+    padding-left: 10px;
+    box-sizing: border-box;   
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    margin: auto;
+    color: gray;
+    cursor: default;
+}
+.last-inp1-div {
+    display: flex;
+    width: 411px;
+    height: 77px;
+    box-shadow: inset 0px 1px 5px 1px #000;
+    background-color: #ffffff;
+    border-radius: 6px;
+}
+.error-div {
+    display: block;
+    width: 500px;
+    height: 0;
+    box-shadow: inset 0px 1px 5px 1px #000;
+    background-color: #ff6767;
+    border-radius: 6px;
+    transition: 1s;
+}
+.error-message {
+    width: 500px;
+    height: 0;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    cursor: default;
+    text-align: center;
+    display: flex;
+    opacity: 0;
+    transition: 1s;
+    pointer-events: none;
+}
+.last-inp2 {
+    width: 77px;
+    height: 77px;
+    border: 0px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: inset 0px 1px 5px 1px #000;
+    background-color: #ffffff;
+    display: flex;
+}
+.enter-inp {
+    min-width: 250px;
+    height: 55px;
+    border: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 3px 5px 1px #000;
+    background-color: #78b4f8;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.enter-inp:hover {
+    background-color: #5e8dc4;
+}
+.enter-inp:active {
+    box-shadow: inset 0px 3px 5px 1px #000;
+}
+.td-padding-up-down {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.right-dual-imp {
+    margin-left: auto;
+}
+td {
+    padding: 0px;
+    display: flex;
+}
+.pointer {
+    cursor: pointer;
+}
+.checkbox {
+    cursor: pointer;
+    display: none;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+.fake-checkbox {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: #ffffff;
+    border: 2px solid #064a75;
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 0px 0px 3px 0px #000;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.fake-checkbox:hover {
+    transform: scale(1.05);
+    border: 2px solid #0e7bbe;
+}
+.fake-checkbox::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-image: url("\\images\\galka.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.3s;
+}
+.checkbox:checked + .fake-checkbox::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+.label {
+    width: 39px;
+    height: 39px;
+    margin: auto;
+}
+.color {
+    background-color: #ffffff;
+}

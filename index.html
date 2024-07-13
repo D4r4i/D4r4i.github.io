@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blood Circulation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="images/pageIco.png" rel="shortcut icon">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/data.css" rel="stylesheet">
+        <link href="css/bottomTab.css" rel="stylesheet">
+    </head>
+    <body class="body-style">
+        <div class="main-block">
+            <div class="top-menu">
+                <h1 class="name">Blood Circulation</h1>
+            </div>
+            <div class="info-block">
+                <div class="div-info">
+                    <h1 class="info">
+                        Сервис предназначен для оценки кровообращения человека.
+                    </h1>
+                    <h1 class="info">
+                        Предлагаемые рекомендации носят ознакомительный характер и требуют согласования  со специалистом.
+                    </h1>
+                </div>
+            </div>
+            <div class="data-block">
+                <div id="bg" class="bg-img">
+                    <table class="inp-table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input id="sd" type="text"  class="one-inp  color" placeholder="Систолическое давление">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-padding-up-down">
+                                    <input id="dd" type="text" class="one-inp  color" placeholder="Диастолическое давление">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input id="bpm" type="text" class="one-inp  color" placeholder="Частота сердечных сокращений">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-padding-up-down">
+                                    <input id="weight" type="text" class="dual-inp  color" placeholder="Вес">
+                                    <input id="age" type="text" class="dual-inp right-dual-imp  color" placeholder="Возраст">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input id="height" type="text" class="dual-inp  color" placeholder="Рост">
+                                    <select id="sex" class="dual-inp right-dual-imp pointer color">
+                                        <option value="none">Пол</option>
+                                        <option value="man">Мужской</option>
+                                        <option value="woman">Женский</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td-padding-up-down">
+                                    <div class="last-inp1-div">
+                                        <h1 class="last-inp1">
+                                            Прием препаратов, снижающих артериальное даввление
+                                        </h1>
+                                    </div>
+                                    <div class="last-inp2 right-dual-imp">
+                                        <label class="label">
+                                            <input id="drug" type="checkbox" class="checkbox">
+                                            <span class="fake-checkbox"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="error" class="error-div">
+                                    <a class="error-message">
+                                        Введены не все значения или введены неверно
+                                    </a>
+                                </td>
+                                <td>
+                                    <button id="but" class="enter-inp" onclick="performData()">Ввод</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="data-plate">
+                        <div class="cell otkl">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="data-td">
+                                            <h1 id="top1" class="text-block"></h1>
+                                            <h1 id="bot1" class="text-block"></h1>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cell ind">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="data-td">
+                                            <h1 id="top2" class="text-block"></h1>
+                                            <h1 id="bot2" class="text-block"></h1>        
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cell mok">
+                            <h1 id="top3" class="text-block mok-font-size"></h1>
+                            <h1 id="bot3" class="text-block mok-font-size"></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="results">
+                <table class="table-results">
+                    <tr>
+                        <td class="td-data">
+                            <h1 id="res-inf" class="res-inf"></h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-data">
+                            <h1 id="pd" class="res-inf"></h1>
+                            <h1 id="pd-data" class="res-inf right-data"></h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-data">
+                            <h1 id="so" class="res-inf"></h1>
+                            <h1 id="so-data" class="res-inf right-data"></h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-data">
+                            <h1 id="MT" class="res-inf"></h1>
+                            <h1 id="MT-data" class="res-inf right-data"></h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-data">
+                            <h1 id="MD" class="res-inf"></h1>
+                            <h1 id="MD-data" class="res-inf right-data"></h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-data">
+                            <h1 id="MP" class="res-inf"></h1>
+                            <h1 id="MP-data" class="res-inf right-data"></h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-data">
+                            <h1 id="Tsc" class="res-inf"></h1>
+                            <h1 id="Tsc-data" class="res-inf right-data"></h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-data">
+                            <h1 id="Tp" class="res-inf"></h1>
+                            <h1 id="Tp-data" class="res-inf right-data"></h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-data">
+                            <h1 id="IMOK" class="res-inf"></h1>
+                            <h1 id="IMOK-data" class="res-inf right-data"></h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-data">
+                            <h1 id="VI" class="res-inf"></h1>
+                            <h1 id="VI-data" class="res-inf right-data"></h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-data">
+                            <h1 id="BMI" class="res-inf"></h1>
+                            <h1 id="BMI-data" class="res-inf right-data"></h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-data">
+                            <h1 id="OCK" class="res-inf"></h1>
+                            <h1 id="OCK-data" class="res-inf right-data"></h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-data">
+                            <h1 id="DOCK" class="res-inf"></h1>
+                            <h1 id="DOCK-data" class="res-inf right-data"></h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-data-bot">
+                            <h1 id="OtklOCK" class="res-inf"></h1>
+                            <h1 id="OtklOCK-data" class="res-inf right-data"></h1>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="bottom-info">
+                <div class="mail">
+                    <div>Support: tsvetkova57@gmail.com</div>
+                </div>
+                <div class="bot-label">
+                    <img src="images/tgIco.png">
+                    <a href="https://t.me/BloodCirculationBot" class="bot-link">Blood circulation bot</a>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

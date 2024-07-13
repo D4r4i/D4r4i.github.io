@@ -1,0 +1,38 @@
+.bottom-info {
+    width: 100%;
+    height: 80px;
+    background-color: #064a75;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.mail {
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    /* margin-left: auto; */
+}
+.bot-label {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+}
+.bot-link {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+.bot-link:hover {
+    border-bottom: 2px solid #1aa2b9;
+}
+.bot-link:active {
+    background-color: #1073b1;
+}
