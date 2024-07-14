@@ -144,7 +144,8 @@
     display: flex;
 }
 .enter-inp {
-    min-width: 250px;
+    min-width: 244px;
+    color: #000;
     height: 55px;
     border: 0px;
     padding: 0;
@@ -159,6 +160,12 @@
     font-size: 30px;
     cursor: pointer;
     transition: 0.5s;
+    /* margin-right: 6px; */
+}
+.enter-inp2 {
+    margin-left: 6px;
+    margin-right: 0;
+    display: none;
 }
 .enter-inp:hover {
     background-color: #5e8dc4;

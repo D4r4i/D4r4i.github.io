@@ -10,6 +10,10 @@ let performData = function() {
         document.querySelector('#error').style.margin = 0;
         document.querySelector('.error-message').style.transition = "0.2s";
         document.querySelector('.error-message').style.opacity = 0;
+
+        document.querySelector('.enter-inp2').style.display = "inline-block";
+        document.querySelector('.enter-inp').style.marginRight = "6px";
+
         moveTable();
         if (isClicked) {
             setTimeout(show, 1100);
@@ -86,6 +90,9 @@ let variablesExam = function() {
     }
 
     // console.log(errors)
+    for (let i = 0; i < inputs.length; i++) {
+        document.querySelector(inputs[i]).style.background = "#ffffff";
+    }
 
     for (let i = 0; i < errors.length; i++) {
         document.querySelector(errors[i]).style.background = "#ffc6c6";
@@ -95,12 +102,14 @@ let variablesExam = function() {
 
 let moveTable = function() {
     if(!isClicked){
-        document.querySelector('#but').textContent = 'Ввести другие значения';
+        document.querySelector('#but').textContent = 'Сброс';
+        document.querySelector('#but').style.background = "#ffc6c6";
         document.querySelector('#data-plate').style.width = "1000px";
         isClicked = true;
     }
     else{
         document.querySelector('#but').textContent = 'Ввод';
+        document.querySelector('#but').style.background = "#78b4f8";
         document.querySelector('#data-plate').style.width = "0";
 
         document.getElementById("sd").value = '';
@@ -127,6 +136,9 @@ let moveTable = function() {
         document.querySelector("#bot2").innerHTML = "";
         document.querySelector("#top3").innerHTML = "";
         document.querySelector("#bot3").innerHTML = "";
+
+        document.querySelector('.enter-inp2').style.display = "none";
+        document.querySelector('.enter-inp').style.marginRight = "auto";
 
         isClicked = false;
     }
